@@ -1,0 +1,69 @@
+for fullfilled we have then()
+for rejected we have catch()
+map()- It will take three arguments-1st is my current values(this value will run for each element inside the array and it will return the output)
+and 2nd it have index number and third it will have the array in which we are working on.
+
+
+
+
+fetch("https://fakestoreapi.com/products")
+// .then((data)=>{
+//     return data.json()
+// })
+// .then((fulfilldata)=>{
+//     // console.log(fulfilldata[3].title);
+//     let d1 = "";
+//     fulfilldata.map((element)=>{
+//         d1+= `<div class="card">
+//             <h2 class="title">${element.title}</h2>
+//             <img src=${element.image} alt="image">
+//             <p class="desc">${element.description}</p>
+//             <p class="para">${element.category}</p>
+//             <p class="para two">${element.price}</p>
+//         </div>`
+        
+            
+//     })
+//     document.getElementById("cards").innerHTML=d1
+    
+// })
+// .catch((error)=>{
+//     console.log(error);
+// })
+
+
+
+
+//     const fetchedString= element.description
+        //     function getFirstWords(str, wordCount) {
+        // // Split the string into words using space as a delimiter
+        // const wordsArray = str.split(' ');
+        
+        // // Slice the array to get the first 'wordCount' words
+        // const firstWords = wordsArray.slice(0, wordCount);
+        
+        // // Join the words back into a string
+        // return firstWords.join(' ');
+    // }
+    // const getWord = getFirstWords(fetchedString, 5);
+    // console.log(getWord);
+
+
+ convertRatingToStars(rating) {
+    const wholeStars = Math.floor(rating); // Full stars count
+    const hasHalfStar = rating % 1 >= 0.5; // Check for half star
+
+    // Repeat full star symbol for whole stars
+    let stars = '★'.repeat(wholeStars);
+
+    // Add half star symbol if there's a half star
+    if (hasHalfStar) {
+        stars += '☆';
+    }
+
+    return stars;
+}
+
+const rating = 4.5;
+const stars = convertRatingToStars(rating);
+console.log(stars); // Output: "★★★★☆"
